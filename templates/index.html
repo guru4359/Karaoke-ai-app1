@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>KaraokeOnDemand</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #a1c4fd, #c2e9fb);
+            padding: 30px;
+            color: #333;
+        }
+        .container {
+            max-width: 700px;
+            margin: auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        .upload-section {
+            margin: 20px 0;
+        }
+        input[type=text], input[type=file] {
+            width: 100%;
+            padding: 12px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #aaa;
+            border-radius: 8px;
+        }
+        button {
+            background: #4CAF50;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        .pricing {
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        .lyrics-box {
+            margin-top: 30px;
+            background: #eef;
+            padding: 15px;
+            border-radius: 8px;
+            min-height: 120px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎤 Vocal Remover & KaraokeOnDemand</h1>
+        <p style="text-align:center;">Separate voice from music at the best possible quality & for a reasonable cost</p>
+
+        <form method="POST" action="/upload" enctype="multipart/form-data" class="upload-section">
+            <label>Add YouTube Link</label>
+            <input type="text" name="youtube_url" placeholder="Paste YouTube URL here">
+            <p style="text-align:center;">OR</p>
+            <label>Browse Files</label>
+            <input type="file" name="audio_file">
+            <button type="submit">Upload & Process</button>
+        </form>
+
+        <div class="pricing">
+            <h3>Plans</h3>
+            <p>🎧 Free: 1 song | 🕐 Delivery: ~10 minutes | 💰 Extra: ₹300 / $3 per song</p>
+            <p>✨ <strong>Subscriptions:</strong></p>
+            <ul>
+                <li>$8/month – Unlimited Songs, Max 30 Min Each, Very High Quality + Lyrics</li>
+                <li>$75/year – Same benefits, save $21</li>
+            </ul>
+            <a href="https://buy.stripe.com/test_monthly"><button>Subscribe Monthly</button></a>
+            <a href="https://buy.stripe.com/test_yearly"><button>Subscribe Yearly</button></a>
+        </div>
+
+        <div class="lyrics-box">
+            <strong>Lyrics Preview:</strong>
+            <p>[00:12.00] First line of lyrics...</p>
+            <p>[00:15.00] Second line of lyrics...</p>
+        </div>
+    </div>
+</body>
+</html>
